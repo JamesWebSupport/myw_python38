@@ -1,0 +1,75 @@
+{# include static directory #}
+{% load static %}
+
+{# Use bootstrap as basic #}
+{% load bootstrap4 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+
+
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Display Title -->
+    {% if title %}
+        <title>mywService - {{ title }}</title>
+    {% else %}
+        <title>mywService</title>
+    {% endif %}
+</head>
+<body>
+    <header class="page-header">
+      <nav class="navbar navbar-expand-sm navbar-lg bg-lg justify-content-between">
+        <a href="#" class="navbar-brand"><img src="/media/logo.jpg" alt="site logo"></a>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">AboutMe</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">ContactMe</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Blog</a>
+          </li>
+
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+      <div class="row">
+        <div class="col-md-8">
+
+          {% block content %}{% endblock %}
+        </div>
+        <div class="col-md-4">
+
+          <a href="https://www.theweathernetwork.com/ca/weather/quebec/montreal" class="" target="_blank"><h5>Montreal Weather</h5></a>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <pre>
+
+
+      </pre>
+      <div class="text-center">
+        <a href="https://www.facebook.com/fe.yan.5" class="" target="_blank"><img src="/media/facebook48.png"></a>
+        <a href="https://www.instagram.com/jamesjannymontreal/" class="" target="_blank"><img src="/media/instagram48.png"></a>
+        <a href="https://www.linkedin.com/in/fengyanwebmedia" class="" target="_blank"><img src="/media/linkedin48.png"></a>
+      </div>
+      <p class="text-center">Call me at 514-998-5123</p>
+      <p class="text-center">@copywrite 2019</p>
+    </footer>
+</body>
+
+</html>
