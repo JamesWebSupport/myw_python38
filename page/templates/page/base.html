@@ -30,17 +30,15 @@
         <a href="#" class="navbar-brand"><img src="/media/logo.jpg" alt="site logo"></a>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a href="#" class="nav-link">Home</a>
+            <a href="{% url 'home'}" class="nav-link">Home</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">AboutMe</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">ContactMe</a>
+            <a href="{% url 'contactme' %}" class="nav-link">ContactMe</a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">Blog</a>
           </li>
+
 
         </ul>
       </nav>
